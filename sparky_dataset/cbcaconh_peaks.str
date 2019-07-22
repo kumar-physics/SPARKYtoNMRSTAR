@@ -1,0 +1,180 @@
+    #########################
+    #  Spectral peak lists  #
+    #########################
+
+save_peak_list_2_3D-CBCA(CO)NH
+   _Spectral_peak_list.Sf_category                    spectral_peak_list
+   _Spectral_peak_list.Sf_framecode                   peak_list_2_3D-CBCA(CO)NH
+   _Spectral_peak_list.Experiment_name                3D-CBCA(CO)NH
+   _Spectral_peak_list.Experiment_class               'CBCA(CO) N though bond'
+   _Spectral_peak_list.Number_of_spectral_dimensions  3
+
+   loop_
+      _Spectral_dim.ID
+      _Spectral_dim.Atom_type
+      _Spectral_dim.Atom_isotope_number
+      _Spectral_dim.Spectral_region
+      _Spectral_dim.Spectral_peak_list_ID
+
+     1   N   15   NH      2    
+     2   C   13   CA,CB   2    
+     3   H   1    HN      2    
+
+   stop_
+
+   loop_
+      _Peak_row_format.ID
+      _Peak_row_format.Comp_ID_1
+      _Peak_row_format.Comp_index_ID_1
+      _Peak_row_format.Atom_ID_1
+      _Peak_row_format.Comp_ID_2
+      _Peak_row_format.Comp_index_ID_2
+      _Peak_row_format.Atom_ID_2
+      _Peak_row_format.Comp_ID_3
+      _Peak_row_format.Comp_index_ID_3
+      _Peak_row_format.Atom_ID_3
+      _Peak_row_format.Position_1
+      _Peak_row_format.Position_2
+      _Peak_row_format.Position_3
+      _Peak_row_format.Figure_of_merit
+      _Peak_row_format.Peak_list_ID
+
+     1     LEU   69   N   HIS   68   CB   LEU   69   H   124.250   31.463   8.300   1.000   2    
+     2     LEU   43   N   ARG   42   CA   LEU   43   H   124.503   55.116   8.826   1.000   2    
+     3     LYS   29   N   ALA   28   CB   LYS   29   H   120.293   17.684   7.852   1.000   2    
+     4     LYS   27   N   VAL   26   CB   LYS   27   H   119.036   30.766   8.542   1.000   2    
+     5     LYS   6    N   VAL   5    CB   LYS   6    H   127.827   34.209   8.874   1.000   2    
+     6     ALA   28   N   LYS   27   CA   ALA   28   H   123.601   59.194   7.983   1.000   2    
+     7     SER   20   N   PRO   19   CB   SER   20   H   103.473   31.845   7.022   1.000   2    
+     8     SER   57   N   LEU   56   CA   SER   57   H   113.590   58.654   8.472   1.000   2    
+     9     THR   66   N   SER   65   CA   THR   66   H   117.481   60.934   8.738   1.000   2    
+     10    ILE   13   N   THR   12   CA   ILE   13   H   127.740   62.423   9.508   1.000   2    
+     11    GLU   34   N   LYS   33   CA   GLU   34   H   114.315   58.163   8.715   1.000   2    
+     12    LEU   43   N   ARG   42   CB   LEU   43   H   124.503   31.773   8.826   1.000   2    
+     13    ASN   60   N   TYR   59   CB   ASN   60   H   116.101   39.972   8.140   1.000   2    
+     14    THR   12   N   LYS   11   CA   THR   12   H   120.713   56.290   8.649   1.000   2    
+     15    VAL   17   N   GLU   16   CA   VAL   17   H   117.584   54.907   8.926   1.000   2    
+     16    LYS   48   N   GLY   47   CA   LYS   48   H   122.020   45.336   7.974   1.000   2    
+     17    ASN   25   N   GLU   24   CA   ASN   25   H   121.366   60.651   7.920   1.000   2    
+     18    GLU   51   N   LEU   50   CA   GLU   51   H   123.278   54.221   8.395   1.000   2    
+     19    TYR   59   N   ASP   58   CA   TYR   59   H   115.817   57.378   7.241   1.000   2    
+     20    LYS   27   N   VAL   26   CA   LYS   27   H   119.037   67.634   8.542   1.000   2    
+     21    LEU   71   N   VAL   70   CB   LEU   71   H   123.282   34.810   8.137   1.000   2    
+     22    ASN   60   N   TYR   59   CA   ASN   60   H   116.103   58.242   8.141   1.000   2    
+     23    GLU   64   N   LYS   63   CA   GLU   64   H   114.593   57.862   9.302   1.000   2    
+     24    THR   9    N   LEU   8    CA   THR   9    H   105.972   57.528   7.634   1.000   2    
+     25    ILE   23   N   THR   22   CA   ILE   23   H   121.357   59.675   8.525   1.000   2    
+     26    ILE   61   N   ASN   60   CB   ILE   61   H   118.939   37.374   7.238   1.000   2    
+     27    LEU   67   N   THR   66   CA   LEU   67   H   127.631   62.473   9.408   1.000   2    
+     28    VAL   70   N   LEU   69   CB   VAL   70   H   127.116   44.227   9.192   1.000   2    
+     29    ARG   74   N   LEU   73   CA   ARG   74   H   122.061   54.955   8.450   1.000   2    
+     30    LYS   63   N   GLN   62   CB   LYS   63   H   120.661   31.598   8.492   1.000   2    
+     31    PHE   4    N   ILE   3    CA   PHE   4    H   118.534   59.606   8.595   1.000   2    
+     32    GLN   31   N   ILE   30   CA   GLN   31   H   123.663   66.092   8.542   1.000   2    
+     33    THR   7    N   LYS   6    CA   THR   7    H   115.574   54.597   8.735   1.000   2    
+     34    VAL   5    N   PHE   4    CA   VAL   5    H   121.339   55.135   9.301   1.000   2    
+     35    GLU   51   N   LEU   50   CB   GLU   51   H   123.279   41.345   8.395   1.000   2    
+     36    LYS   6    N   VAL   5    CA   LYS   6    H   127.827   60.482   8.874   1.000   2    
+     37    VAL   17   N   GLU   16   CB   VAL   17   H   117.583   29.690   8.927   1.000   2    
+     38    ASN   25   N   GLU   24   CB   ASN   25   H   121.369   28.633   7.920   1.000   2    
+     39    LEU   50   N   GLN   49   CA   LEU   50   H   125.735   55.842   8.541   1.000   2    
+     40    GLY   75   N   ARG   74   CA   GLY   75   H   110.474   56.173   8.517   1.000   2    
+     41    GLN   41   N   GLN   40   CB   GLN   41   H   118.114   30.114   7.478   1.000   2    
+     42    LEU   15   N   THR   14   CB   LEU   15   H   125.164   69.641   8.720   1.000   2    
+     43    GLN   62   N   ILE   61   CA   GLN   62   H   125.037   62.439   7.621   1.000   2    
+     44    LEU   67   N   THR   66   CB   LEU   67   H   127.628   70.184   9.408   1.000   2    
+     45    SER   65   N   GLU   64   CA   SER   65   H   115.035   58.291   7.657   1.000   2    
+     46    ILE   36   N   GLY   35   CA   ILE   36   H   120.335   46.031   6.130   1.000   2    
+     47    ILE   23   N   THR   22   CB   ILE   23   H   121.349   71.260   8.525   1.000   2    
+     48    LEU   73   N   ARG   72   CA   LEU   73   H   124.480   55.536   8.368   1.000   2    
+     49    VAL   5    N   PHE   4    CB   VAL   5    H   121.338   41.252   9.301   1.000   2    
+     50    GLU   18   N   VAL   17   CA   GLU   18   H   119.319   58.430   8.640   1.000   2    
+     51    GLN   41   N   GLN   40   CA   GLN   41   H   118.114   55.617   7.478   1.000   2    
+     52    ARG   42   N   GLN   41   CA   ARG   42   H   123.076   56.643   8.505   1.000   2    
+     53    ILE   13   N   THR   12   CB   ILE   13   H   127.741   69.795   9.509   1.000   2    
+     54    THR   12   N   LYS   11   CB   THR   12   H   120.714   33.369   8.648   1.000   2    
+     55    GLN   49   N   LYS   48   CA   GLN   49   H   122.941   54.605   8.635   1.000   2    
+     56    LEU   8    N   THR   7    CA   LEU   8    H   121.430   60.537   9.115   1.000   2    
+     57    HIS   68   N   LEU   67   CA   HIS   68   H   118.991   53.819   9.233   1.000   2    
+     58    GLY   35   N   GLU   34   CA   GLY   35   H   108.950   55.310   8.499   1.000   2    
+     59    ARG   72   N   LEU   71   CB   ARG   72   H   123.917   42.791   8.622   1.000   2    
+     60    LYS   63   N   GLN   62   CA   LYS   63   H   120.656   53.612   8.492   1.000   2    
+     61    VAL   70   N   LEU   69   CA   VAL   70   H   127.116   53.856   9.192   1.000   2    
+     62    GLY   47   N   ALA   46   CA   GLY   47   H   102.583   52.531   8.147   1.000   2    
+     63    GLN   2    N   MET   1    CA   GLN   2    H   123.039   54.472   8.944   1.000   2    
+     64    GLY   35   N   GLU   34   CB   GLY   35   H   108.950   33.196   8.499   1.000   2    
+     65    PHE   45   N   ILE   44   CB   PHE   45   H   125.383   41.200   8.837   1.000   2    
+     66    LYS   29   N   ALA   28   CA   LYS   29   H   120.296   55.393   7.852   1.000   2    
+     67    GLN   62   N   ILE   61   CB   GLN   62   H   125.034   36.649   7.621   1.000   2    
+     68    GLU   16   N   LEU   15   CB   GLU   16   H   122.521   46.912   8.121   1.000   2    
+     69    ILE   3    N   GLN   2    CA   ILE   3    H   115.195   55.103   8.293   1.000   2    
+     70    ARG   72   N   LEU   71   CA   ARG   72   H   123.914   54.006   8.623   1.000   2    
+     71    ARG   74   N   LEU   73   CB   ARG   74   H   122.061   42.337   8.450   1.000   2    
+     72    ILE   3    N   GLN   2    CB   ILE   3    H   115.197   30.596   8.293   1.000   2    
+     73    GLN   40   N   ASP   39   CB   GLN   40   H   116.999   39.801   7.814   1.000   2    
+     74    LYS   11   N   GLY   10   CA   LYS   11   H   121.973   45.336   7.261   1.000   2    
+     75    GLU   64   N   LYS   63   CB   GLU   64   H   114.593   32.590   9.302   1.000   2    
+     76    GLY   47   N   ALA   46   CB   GLY   47   H   102.582   16.486   8.147   1.000   2    
+     77    THR   9    N   LEU   8    CB   THR   9    H   105.973   41.902   7.634   1.000   2    
+     78    LYS   33   N   ASP   32   CB   LYS   33   H   115.552   40.959   7.413   1.000   2    
+     79    ILE   44   N   LEU   43   CB   ILE   44   H   122.263   45.744   9.056   1.000   2    
+     80    ILE   61   N   ASN   60   CA   ILE   61   H   118.938   54.148   7.238   1.000   2    
+     81    THR   22   N   ASP   21   CA   THR   22   H   109.112   55.848   7.877   1.000   2    
+     82    ALA   46   N   PHE   45   CB   ALA   46   H   132.908   43.679   8.922   1.000   2    
+     83    LEU   50   N   GLN   49   CB   LEU   50   H   125.742   29.077   8.541   1.000   2    
+     84    GLN   2    N   MET   1    CB   GLN   2    H   123.040   33.106   8.944   1.000   2    
+     85    ILE   44   N   LEU   43   CA   ILE   44   H   122.262   52.999   9.056   1.000   2    
+     86    ASP   32   N   GLN   31   CA   ASP   32   H   119.842   60.043   8.016   1.000   2    
+     87    GLU   16   N   LEU   15   CA   GLU   16   H   122.525   52.763   8.122   1.000   2    
+     88    ASP   58   N   SER   57   CA   ASP   58   H   124.593   61.192   7.928   1.000   2    
+     89    THR   55   N   ARG   54   CA   THR   55   H   108.864   54.299   8.806   1.000   2    
+     90    THR   14   N   ILE   13   CA   THR   14   H   121.843   60.010   8.743   1.000   2    
+     91    GLY   75   N   ARG   74   CB   GLY   75   H   110.474   30.897   8.518   1.000   2    
+     92    THR   14   N   ILE   13   CB   THR   14   H   121.843   40.758   8.743   1.000   2    
+     93    THR   22   N   ASP   21   CB   THR   22   H   109.112   40.864   7.877   1.000   2    
+     94    ASP   21   N   SER   20   CA   ASP   21   H   123.965   57.388   8.042   1.000   2    
+     95    THR   55   N   ARG   54   CB   THR   55   H   108.856   32.684   8.807   1.000   2    
+     96    ILE   30   N   LYS   29   CA   ILE   30   H   121.397   59.771   8.271   1.000   2    
+     97    TYR   59   N   ASP   58   CB   TYR   59   H   115.820   40.292   7.241   1.000   2    
+     98    ASP   52   N   GLU   51   CB   ASP   52   H   120.440   31.817   8.158   1.000   2    
+     99    GLY   10   N   THR   9    CA   GLY   10   H   109.269   61.448   7.808   1.000   2    
+     100   ALA   28   N   LYS   27   CB   ALA   28   H   123.604   33.665   7.983   1.000   2    
+     101   LYS   33   N   ASP   32   CA   LYS   33   H   115.553   57.406   7.413   1.000   2    
+     102   LEU   56   N   THR   55   CA   LEU   56   H   118.109   59.715   8.134   1.000   2    
+     103   SER   20   N   PRO   19   CA   SER   20   H   103.471   65.284   7.021   1.000   2    
+     104   PHE   45   N   ILE   44   CA   PHE   45   H   125.382   58.935   8.837   1.000   2    
+     105   PHE   4    N   ILE   3    CB   PHE   4    H   118.533   42.080   8.596   1.000   2    
+     106   ARG   54   N   GLY   53   CA   ARG   54   H   119.419   45.159   7.453   1.000   2    
+     107   ASP   39   N   PRO   38   CB   ASP   39   H   113.735   32.802   8.529   1.000   2    
+     108   GLY   76   N   GLY   75   CA   GLY   76   H   108.790   43.934   8.346   0.980   2    
+     109   LEU   69   N   HIS   68   CA   LEU   69   H   124.153   55.618   8.299   1.000   2    
+     110   ARG   42   N   GLN   41   CB   ARG   42   H   123.072   31.508   8.505   1.000   2    
+     111   GLN   40   N   ASP   39   CA   GLN   40   H   117.000   55.791   7.814   1.000   2    
+     112   ASP   32   N   GLN   31   CB   ASP   32   H   119.843   27.716   8.016   1.000   2    
+     113   LEU   8    N   THR   7    CB   LEU   8    H   121.428   70.531   9.115   1.000   2    
+     114   SER   57   N   LEU   56   CB   SER   57   H   113.589   40.256   8.472   1.000   2    
+     115   LEU   15   N   THR   14   CA   LEU   15   H   125.164   62.100   8.720   1.000   2    
+     116   HIS   68   N   LEU   67   CB   HIS   68   H   118.993   44.327   9.232   1.000   2    
+     117   LEU   56   N   THR   55   CB   LEU   56   H   118.111   72.360   8.134   1.000   2    
+     118   ASP   58   N   SER   57   CB   ASP   58   H   124.589   62.523   7.928   1.000   2    
+     119   SER   65   N   GLU   64   CB   SER   65   H   115.035   25.956   7.657   1.000   2    
+     120   GLN   49   N   LYS   48   CB   GLN   49   H   122.944   34.425   8.635   1.000   2    
+     121   ASP   21   N   SER   20   CB   ASP   21   H   123.963   63.413   8.042   1.000   2    
+     122   ILE   30   N   LYS   29   CB   ILE   30   H   121.406   33.316   8.271   1.000   2    
+     123   LEU   71   N   VAL   70   CA   LEU   71   H   123.281   60.654   8.137   1.000   2    
+     124   GLU   34   N   LYS   33   CB   GLU   34   H   114.315   34.006   8.714   1.000   2    
+     125   GLU   18   N   VAL   17   CB   GLU   18   H   119.321   36.365   8.640   1.000   2    
+     126   THR   66   N   SER   65   CB   THR   66   H   117.481   64.942   8.738   1.000   2    
+     127   GLN   31   N   ILE   30   CB   GLN   31   H   123.662   36.738   8.542   1.000   2    
+     128   GLY   10   N   THR   9    CB   GLY   10   H   109.267   69.078   7.808   1.000   2    
+     129   VAL   26   N   ASN   25   CA   VAL   26   H   122.190   56.017   8.093   1.000   2    
+     130   ASP   52   N   GLU   51   CA   ASP   52   H   120.441   55.948   8.157   1.000   2    
+     131   THR   7    N   LYS   6    CB   THR   7    H   115.577   34.492   8.734   1.000   2    
+     132   LEU   73   N   ARG   72   CB   LEU   73   H   124.482   31.297   8.368   1.000   2    
+     133   VAL   26   N   ASN   25   CB   VAL   26   H   122.190   38.396   8.093   1.000   2    
+     134   ASP   39   N   PRO   38   CA   ASP   39   H   113.737   66.125   8.529   1.000   2    
+     135   ALA   46   N   PHE   45   CA   ALA   46   H   132.908   56.688   8.922   1.000   2    
+
+   stop_
+
+save_

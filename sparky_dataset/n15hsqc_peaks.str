@@ -1,0 +1,53 @@
+    #########################
+    #  Spectral peak lists  #
+    #########################
+
+save_peak_list_1_N15-HSQC
+   _Spectral_peak_list.Sf_category                    spectral_peak_list
+   _Spectral_peak_list.Sf_framecode                   peak_list_1_N15-HSQC
+   _Spectral_peak_list.Experiment_name                N15-HSQC
+   _Spectral_peak_list.Number_of_spectral_dimensions  2
+
+   loop_
+      _Spectral_dim.ID
+      _Spectral_dim.Atom_type
+      _Spectral_dim.Atom_isotope_number
+      _Spectral_dim.Spectral_region
+      _Spectral_dim.Spectral_peak_list_ID
+
+     1   N   15   NH   1    
+     2   H   1    HN   1    
+
+   stop_
+
+   loop_
+      _Peak_row_format.ID
+      _Peak_row_format.Comp_ID_1
+      _Peak_row_format.Comp_index_ID_1
+      _Peak_row_format.Atom_ID_1
+      _Peak_row_format.Comp_ID_2
+      _Peak_row_format.Comp_index_ID_2
+      _Peak_row_format.Atom_ID_2
+      _Peak_row_format.Position_1
+      _Peak_row_format.Position_2
+      _Peak_row_format.Figure_of_merit
+      _Peak_row_format.Peak_list_ID
+
+     1    LEU   5    N   LEU   5    H   120.397   7.924   1.000   1    
+     2    GLU   6    N   GLU   6    H   118.147   8.569   1.000   1    
+     3    LYS   7    N   LYS   7    H   120.583   7.970   1.000   1    
+     4    GLU   8    N   GLU   8    H   122.758   7.815   1.000   1    
+     5    ILE   9    N   ILE   9    H   119.465   8.288   1.000   1    
+     6    LEU   12   N   LEU   12   H   121.999   8.556   1.000   1    
+     7    GLU   13   N   GLU   13   H   118.507   8.903   1.000   1    
+     8    LYS   14   N   LYS   14   H   120.614   7.786   1.000   1    
+     9    GLU   15   N   GLU   15   H   122.509   7.863   1.000   1    
+     10   ILE   16   N   ILE   16   H   119.801   8.464   1.000   1    
+     11   LEU   19   N   LEU   19   H   120.245   8.232   1.000   1    
+     12   GLU   20   N   GLU   20   H   119.419   8.769   1.000   1    
+     13   LYS   21   N   LYS   21   H   117.950   7.543   1.000   1    
+     14   MET   22   N   MET   22   H   117.201   7.565   1.000   1    
+
+   stop_
+
+save_
