@@ -232,7 +232,119 @@ class SPARKYtoNMRSTAR(object):
             peak_row_loop.add_data(d)
             id+=1
         sf.add_loop(peak_row_loop)
+        pk_char_lp = pynmrstar.Loop.from_scratch('Peak_char')
+        pk_row_tags = peak_row_loop.get_tag_names()
+        tags = ['Peak_ID','Spectral_dim_ID','Chemical_shift_val','Spectral_peak_list_ID']
+        pk_char_lp.add_tag(tags)
+        for dat in peak_row_loop.data:
+            pk_char_lp.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                 1,dat[pk_row_tags.index('_Peak_row_format.Position_1')],pl_id])
+            pk_char_lp.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                 2, dat[pk_row_tags.index('_Peak_row_format.Position_2')], pl_id])
+            if dimensions == 3:
+                pk_char_lp.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                     3, dat[pk_row_tags.index('_Peak_row_format.Position_3')], pl_id])
+            if dimensions == 4:
+                pk_char_lp.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                     4, dat[pk_row_tags.index('_Peak_row_format.Position_4')], pl_id])
+                pk_char_lp.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                     4, dat[pk_row_tags.index('_Peak_row_format.Position_4')], pl_id])
+        sf.add_loop(pk_char_lp)
+
+        apk_loop = pynmrstar.Loop.from_scratch('Assigned_peak_chem_shift')
+        tags = ['Peak_ID','Spectral_dim_ID','Val','Figure_of_merit','Comp_index_ID','Comp_ID','Atom_ID',
+                'Spectral_peak_list_ID']
+        apk_loop.add_tag(tags)
+        for dat in peak_row_loop.data:
+            if '_Peak_row_format.Figure_of_merit' in pk_row_tags:
+                apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],1,
+                                   dat[pk_row_tags.index('_Peak_row_format.Position_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_ID_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Atom_ID_1')],pl_id])
+                apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 2,
+                                   dat[pk_row_tags.index('_Peak_row_format.Position_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_ID_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Atom_ID_2')], pl_id])
+                if dimensions == 3:
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 3,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Atom_ID_3')], pl_id])
+                if dimensions == 4:
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 3,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.ID_3')], pl_id])
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 4,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Atom_ID_4')], pl_id])
+            else:
+                apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 1,
+                                   dat[pk_row_tags.index('_Peak_row_format.Position_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_ID_1')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Atom_ID_1')], pl_id])
+                apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 2,
+                                   dat[pk_row_tags.index('_Peak_row_format.Position_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Comp_ID_2')],
+                                   dat[pk_row_tags.index('_Peak_row_format.Atom_ID_2')], pl_id])
+                if dimensions == 3:
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 3,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Atom_ID_3')], pl_id])
+                if dimensions == 4:
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 3,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_3')],
+                                       dat[pk_row_tags.index('_Peak_row_format.ID_3')], pl_id])
+                    apk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')], 4,
+                                       dat[pk_row_tags.index('_Peak_row_format.Position_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_index_ID_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Comp_ID_4')],
+                                       dat[pk_row_tags.index('_Peak_row_format.Atom_ID_4')], pl_id])
+
+        sf.add_loop(apk_loop)
+        if '_Peak_row_format.Volume' in pk_row_tags or '_Peak_row_format.Height' in pk_row_tags:
+            pk_gen_char_loop = pynmrstar.Loop.from_scratch('Peak_general_char')
+            tags = ['Peak_ID','Intensity_val','Measurement_method','Spectral_peak_list_ID']
+            pk_gen_char_loop.add_tag(tags)
+            for dat in peak_row_loop.data:
+                if '_Peak_row_format.Volume' in pk_row_tags:
+                    pk_gen_char_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                               dat[pk_row_tags.index('_Peak_row_format.Volume')],
+                                               'volume',pl_id])
+                if '_Peak_row_format.Height' in pk_row_tags:
+                    pk_gen_char_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                               dat[pk_row_tags.index('_Peak_row_format.Height')],
+                                               'height',pl_id])
+            sf.add_loop(pk_gen_char_loop)
+        if '_Peak_row_format.Figure_of_merit' in pk_row_tags:
+            pk_loop = pynmrstar.Loop.from_scratch('Peak')
+            tags = ['ID','Figure_of_merit','Spectral_peak_list_ID']
+            pk_loop.add_tag(tags)
+            for dat in peak_row_loop.data:
+                pk_loop.add_data([dat[pk_row_tags.index('_Peak_row_format.ID')],
+                                  dat[pk_row_tags.index('_Peak_row_format.Figure_of_merit')],
+                                  pl_id])
+            sf.add_loop(pk_loop)
         return sf
+
+
 
     @staticmethod
     def read_pine_sparky_2D_peak_list(fname):
@@ -317,6 +429,7 @@ class SPARKYtoNMRSTAR(object):
         ent = pynmrstar.Entry.from_scratch(data_set_name)
         for sf in sf_list:
             ent.add_saveframe(sf)
+        ent.normalize()
         with open(file_name,'w') as wstarfile:
             wstarfile.write(str(ent))
 
