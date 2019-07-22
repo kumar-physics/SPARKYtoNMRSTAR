@@ -327,6 +327,8 @@ if __name__ == "__main__":
     sc = SPARKYtoNMRSTAR()
     # Reading data from pine sparky outputs
     tl1, pl1 = sc.read_pine_sparky_2D_peak_list('sparky_dataset/sparky_N15-HSQC.list')
+    print (tl1)
+    print (pl1[0])
     # Generating saveframe
     sf1 = sc.generate_peak_list_saveframe(experiment_name='N15-HSQC',dimensions=2,atom_type = ['N','H'],
                                           isotope=[15,1],region=['NH','HN'],pl_id=1,tag_list=tl1,data=pl1)
