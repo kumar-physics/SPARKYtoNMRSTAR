@@ -429,7 +429,7 @@ class SPARKYtoNMRSTAR(object):
         ent = pynmrstar.Entry.from_scratch(data_set_name)
         for sf in sf_list:
             ent.add_saveframe(sf)
-        ent.normalize()
+        ent.normalize
         with open(file_name,'w') as wstarfile:
             wstarfile.write(str(ent))
 
